@@ -1,0 +1,672 @@
+﻿* {
+margin: 0;
+}
+
+html {
+	
+	height:100%;
+}
+
+body {
+    background-image: url('../images/bg-paper-vert.jpg');
+	height:100%; 
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	line-height: 1.5em;
+	font-size:14px;
+/* 	font-family: Helvetica, Arial, sans-serif; */
+	font-family: 'Open-sans', sans-serif;
+	color:#fff;
+	font-weight: normal;
+	overflow-y: scroll;
+}
+
+
+/********************************************************/
+/*                    Navigation bar                    */
+/********************************************************/
+.mainmenu { z-index: 999999; width:100%;  padding: 0 0 0 0;}
+@media (min-width: 768px) {
+	.mainmenu { position: fixed; }
+}
+
+ .navbar-toggle {
+
+	background: rgba(255, 255, 255, 0.5) !important;
+	-webkit-transition: all .45s;
+	   -moz-transition: all .45s;
+	        transition: all .45s;
+	margin-top: 20px;		
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid; 
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #eee;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+.open .navbar-toggle { 
+	top:-70px; 
+	opacity: 0;  
+} 
+.mainmenu .dropdown-menu {
+	top: -14em;
+	left: 0px;
+	font-size: 13px;
+	padding:0;
+	background:none;
+	border:0 none;
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display:block;
+	opacity:0;
+	-webkit-transition: all .45s;
+	   -moz-transition: all .45s;
+	        transition: all .45s;
+}
+.mainmenu .dropdown-menu .active { 
+	font-weight:bold;
+}
+.mainmenu .open .dropdown-menu { 
+	top:2px;
+	opacity:1;
+}
+.mainmenu .dropdown-menu a { 
+	padding:10px 10px;
+	margin:0;
+	color:white;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+.mainmenu .dropdown-menu a:hover { 
+	background:rgba(255,255,255,.1);
+	color:white;
+	padding:10px 8px 10px 12px;
+}
+
+
+
+/********************************************************/
+/*             Sections - universal classes             */
+/********************************************************/
+.section { 
+	z-index: 12;
+	min-height:420px;
+	width: 100%; 
+	overflow:auto;
+	height:100%;
+	padding-top:150px;
+	padding-bottom:80px; 
+	display:none;	
+	top:0;
+	position: relative;
+} 
+@media (min-width: 768px) {
+	.section { padding-top:100px;}
+	#main.section
+	 {
+	 padding-top: 60px;
+	 }
+}
+
+
+
+/* Show one of sections */
+#main { 
+	display: block;
+}
+
+#main .caption p
+{
+	font-size: 1.1em;
+}
+
+
+/********************************************************/
+/*                      Typography                      */
+/********************************************************/
+a { color:#fff; text-decoration: none; }
+a:hover, a:active { color:#fff; text-decoration: underline; }
+.lead { 
+	font-weight:normal;
+	font-size:1.2em;
+	line-height:1.2em;
+}
+
+.title,
+.subtitle { 
+	font-family: 'Amatic SC', cursive;
+    text-shadow: 2px 2px 2px  #0C090A;
+	font-weight:normal;
+	font-size:9em;
+	margin-bottom:15px; 
+	color:#F0FFFF !important;
+	line-height:1em;
+}
+.subtitle { 
+	line-height:.9em;
+	font-size:4em;
+	margin-top:0;
+	margin-bottom:30px; 
+}
+.title img
+{
+	width: 80%;
+}
+
+@media (min-width: 500px)
+{
+	.title img
+	{
+		width: 458px;
+	}
+}
+
+@media (max-width: 500px)
+{
+	.title img
+	{
+		visibility: hidden;
+	}
+	
+	.section
+	{
+		padding-top: 20px;
+	}
+}
+
+.tagline { 
+	font-size:1.4em;
+	line-height:1.3em;
+	font-weight:normal;
+	margin-bottom:75px;
+	color:#F0FFFF !important;
+}
+
+@media (max-width: 767px) {
+	.lead { 
+		font-size:1.3em;
+	}
+}
+
+
+/********************************************************/
+/*                   UI - Buttons                       */
+/********************************************************/
+.btn{
+	color:#333;
+	text-shadow: none;
+	text-decoration: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border:0 none;
+}
+.btn:hover {
+	color:#000;
+}
+.btn-lg { 
+	padding:16px 30px;
+	font-size:inherit;
+}
+
+.btn-link {
+	color:rgba(255,255,255,.8);
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active {
+	color:#fff
+}
+.btn-default {
+	background: rgba(255,255,255,.5);
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+	background: rgba(255,255,255,.8);
+}
+.btn-primary {
+	background: rgba(255,255,255,.2);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active {
+	background: rgba(255,255,255,.3);
+}
+
+
+/********************************************************/
+/*                 Custom			                    */
+/********************************************************/
+
+ .navbar-brand {
+	font-family: 'Amatic SC', cursive;
+	font-size:2em;
+	font-weight: bold;
+} 
+
+ .navbar {
+	background-color: rgba(0,0,0,.2);
+	border: 0px;
+	font-color: rgba(255,255,255,.2);
+} 
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    background-color: rgba(0,0,0,.5);
+}
+
+.navbar-inverse .navbar-nav > li > a:active
+{
+	color:rgba(255,255,255,.7);
+}
+
+.navbar-inverse .navbar-nav > li > a
+{
+	color:rgba(255,255,255,.8);
+}
+
+
+.navbar-inverse > .navbar-brand
+{
+	color:rgba(255,255,255,.8);
+}
+
+.navbar .navbar-brand
+{
+	/* height: 80px; */
+	position:relative;
+	width: auto;
+	float: inherit;
+	display: block;
+	padding: 2px 10px;
+}
+
+@media (min-width: 768px) {
+	.navbar .navbar-brand
+	{
+		height: 50px;
+		float: left;
+		width: 160px;
+		display: inline-block;
+		padding: 2px 10px;
+	}
+}
+
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -30px; 
+}
+
+#push {
+  height: 25px;
+}
+
+#footer { 
+  height: 30px;
+  position: relative;
+  width: 100%;
+  z-index: 11; 
+  background-color: rgba(0,0,0,.2);
+}
+
+
+/* Lastly, apply responsive CSS fixes as necessary */
+/* @media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+} */
+
+.container > p.muted {
+	margin: 5px 0px 5px 0px;
+	color: rgba(255,255,255,.7);
+	font-size: 0.8em;
+}
+
+.logo {
+	height: 80px;
+	width: auto;
+	float: left;
+}
+
+
+/********************************************************/
+/*                 UI - Thumbnails                      */
+/********************************************************/
+.thumbnail {
+	background-color: rgba(255,255,255,.2);
+	border: 0 none;
+	padding:10px;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+.thumbnail .caption {
+	color: inherit;
+}
+
+
+
+/********************************************************/
+/*                 Everything else                      */
+/********************************************************/
+
+.list-social .btn { 
+	font-size:1.3em; 
+}
+.list-social .btn:hover, .list-social .btn:active, .list-social .btn:focus { 
+	text-decoration: none; 
+}
+
+
+/* Social buttons in the footer */
+#social { 
+	margin-top:50px;
+	margin-bottom:50px;
+}
+#social .wrapper { 
+	width:340px; 
+	margin:0 auto;
+}
+
+
+
+/***********************************************************/
+/*                   Theme: text shadows                   */
+/***********************************************************/
+.text-shadows { 	
+	text-shadow:0 1px 2px rgba(0,0,0,.2);
+}
+.text-shadows .title,
+.text-shadows .subtitle,
+.text-shadows .tagline { 
+	text-shadow:0 2px 3px rgba(0,0,0,.4);
+}
+.text-shadows .mainmenu .dropdown-menu a { 
+	text-shadow:0 2px 1px rgba(0,0,0,.2);
+}
+.text-shadows .mainmenu .dropdown-menu a:hover { 
+	text-shadow:none;
+}
+
+
+
+/***********************************************************/
+/*                   Inverted theme                        */
+/***********************************************************/
+.theme-invert { 	
+	color:#222;
+	color:rgba(0,0,0,.8); 
+ }
+.theme-invert a { 
+	color:#000;
+}
+.theme-invert .btn {
+	color:rgba(255,255,255,.8);
+}
+.theme-invert .btn:hover {
+	color:#fff;
+}
+.theme-invert .btn-link {
+	color:rgba(0,0,0,.8);
+}
+.theme-invert .btn-link:hover, .theme-invert .btn-link:focus, .theme-invert .btn-link:active {
+	color:#000
+}
+.theme-invert .navbar-toggle {
+	background: rgba(0, 0, 0, 0.12);
+}
+.theme-invert .navbar-toggle .icon-bar {
+  background: #333;
+}
+.theme-invert .mainmenu .dropdown-menu a { 
+	color:#000;
+}
+.theme-invert .mainmenu .dropdown-menu a:hover { 
+	background:rgba(0,0,0,.1);
+	color:#000;
+}
+
+.theme-invert .title,
+.theme-invert .subtitle,
+.theme-invert .tagline { 
+	color:#222222; 
+}
+
+.theme-invert .btn-default {
+	background: rgba(0,0,0,.4);
+}
+.theme-invert .btn-default:hover,
+.theme-invert .btn-default:focus,
+.theme-invert .btn-default:active,
+.theme-invert .btn-default.active {
+	background: rgba(0,0,0,.6);
+	color:#fff;
+}
+.theme-invert .btn-primary {
+	background: rgba(0,0,0,.2);
+}
+.theme-invert .btn-primary:hover,
+.theme-invert .btn-primary:focus,
+.theme-invert .btn-primary:active,
+.theme-invert .btn-primary.active {
+	background: rgba(0,0,0,.3);
+	color:#fff;
+}
+
+.theme-invert .thumbnail {
+	background-color: rgba(255,255,255,.8);
+}
+.thumbnail .caption {
+	color: inherit;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+ 
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+  .navbar-wrapper {
+    margin-top: 20px;
+    margin-bottom: -90px;
+  }
+
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+ 
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+  
+  .navbar-nav>li>a {
+	padding-top: 24px;
+	padding-bottom: 24px;s
+  } 
+ 
+  /*
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        /* Customize the look and feel of the collapsed top nav here */
+        padding: 20px;
+    } */
+  
+
+}
+
+ h1.title img
+   {
+      max-width: 458px;
+	  width: 90%;
+  }
+  
+  body.ie8 h1.title img
+  {
+	width: 458px;
+	height: 300px;
+  }
+
+  .background-container
+  {
+    width: 100%; 
+	height:100%;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+ }
+  .background-container div.bg
+  {
+	width: 100%; 
+	overflow:hidden;
+	height:100%;
+	top: -2000px;
+	left: -14000px;
+	position: absolute;
+	
+ }
+ 
+   .background-container div.bg img
+	{
+	   width: 100%;
+	   position: absolute;
+	   top: 0;
+	   left: 0;
+   }
+.background-container div.bg.current-active
+{
+	min-height:420px;
+	width: 100%; 
+	height:100%;
+	padding-top:100px;
+	padding-bottom:80px; 
+top:0;
+	left: 0;
+	position: absolute;
+
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 768px)
+{
+	.background-container div.bg.current-active
+	{
+	
+	top:0;
+	left: 0;
+	position: fixed;
+	}
+	
+	.background-container .bg.main
+	{
+		top: -100px;
+	}
+	
+	.background-container .bg.weddings
+	{
+		top: -50px
+	}
+	
+	
+}
+
+.ul-point
+{
+	background-image: url(../images/ul-point.png);
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin: 2px 8px 4px 2px;
+}
+
+/*
+.background-container .bg.main
+{
+	background-image: url('../images/bgo4.jpg');
+}
+  
+.background-container .bg.about
+{
+	background-image: url('../images/bgo7.jpg');
+}
+
+.background-container .bg.birthday
+{
+	background-image: url('../images/bgo2.jpg');
+}
+
+.background-container .bg.weddings
+{
+	background-image: url('../images/bgo5.jpg');
+}
+  
+.background-container .bg.contact
+{
+	background-image: url('../images/bgo3.jpg');
+} */ 
+
+
+body.ie8 .col-sm-4
+{
+	width: 33%;
+	float: left;
+}
+
+body.ie8 .col-sm-offset-2
+{
+	margin-left: 16%;
+}
+
+body.ie8 .navbar-nav li
+{
+	float: left;
+}
+
+body.ie8 .navbar .navbar-brand {
+	height: 50px;
+	float: left;
+	width: 160px;
+	display: inline-block;
+	padding: 2px 10px;
+}
+
+body.ie8 .navbar
+{
+	background-color: #805321;
+}
